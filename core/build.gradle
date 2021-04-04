@@ -35,9 +35,9 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
 
-    sandhookImplementation 'com.swift.sandhook:hooklib:4.0.2'
+//    sandhookImplementation 'com.swift.sandhook:hooklib:4.2.1'
     sandhookImplementation 'com.swift.sandhook:xposedcompat:4.0.2'
 
     // 也可以使用whale hook, 也是xposed api, 只是hook原理不同
