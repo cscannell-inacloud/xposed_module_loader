@@ -35,11 +35,11 @@ public class SandHookInitialization {
             disableVMInline_method.setAccessible(true);
             disableVMInline_method.invoke(null);
 
-            Method tryDisableProfile_method = sandHook_Clazz.getDeclaredMethod("tryDisableProfile");
+            Method tryDisableProfile_method = sandHook_Clazz.getDeclaredMethod("tryDisableProfile", String.class);
             tryDisableProfile_method.setAccessible(true);
             tryDisableProfile_method.invoke(null, context.getPackageName());
 
-            Method disableDex2oatInline_method = sandHook_Clazz.getDeclaredMethod("disableDex2oatInline");
+            Method disableDex2oatInline_method = sandHook_Clazz.getDeclaredMethod("disableDex2oatInline", boolean.class);
             disableDex2oatInline_method.setAccessible(true);
             disableDex2oatInline_method.invoke(null, false);
 
